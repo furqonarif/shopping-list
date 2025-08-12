@@ -1,0 +1,52 @@
+body {
+	font-family: calibri;
+}
+
+h1 {
+	color: darkblue;
+	text-shadow: 2px 2px 2px grey;
+}
+
+p {
+	font-weight: bold;
+}
+
+#enter {
+	background-color: darkblue;
+	color: white;
+	font-weight: bold;
+	border: none;
+	padding: 3px 8px;
+	cursor: pointer;
+}
+
+.done {
+	text-decoration: line-through;
+}
+
+#daftar {
+	max-width: 275px;
+}
+
+li {
+  position: relative;
+  padding-right: 60px; /* beri ruang untuk tombol hapus */
+  margin: 5px;
+}
+
+button.delete-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: darkblue;
+  color: white;
+  border: none;
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+button.delete-btn:hover,
+button#enter:hover {
+  background-color: darkslateblue;
+}
