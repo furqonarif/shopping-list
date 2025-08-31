@@ -1,25 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>DOM Events Excersise</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shopping List Futuristik</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-	<h1>Daftar Belanja</h1>
-	<input id="userinput" type="text" placeholder="Nama barang...">
-	<button id="enter">Tambahkan</button>
-	<div id="daftar">
-		<p>Cek Daftar Barang:</p>
-		<ul id="myList">
-			<li>Sepatu</li>
-			<li>Sandal</li>
-			<li>Odol</li>
-			<li>Buku</li>
-			<li>Kaos</li>
-		</ul>
-	</div>
-<script type="text/javascript" src="script.js"></script>
+  <!-- Topbar controls -->
+  <div class="topbar">
+    <div class="brand-actions">
+      <button id="checkoutBtn" class="icon-btn" title="Checkout">🛒 <span>Checkout</span></button>
+      <button id="saveBtn" class="icon-btn" title="Save">⬇️ <span>Save</span></button>
+      <button id="clearBtn" class="icon-btn" title="Clear All">🗑️ <span>Clear All</span></button>
+    </div>
+    <div class="actions">
+      <button id="langToggle" class="icon-btn" aria-label="Toggle language">EN</button>
+      <button id="darkToggle" class="icon-btn" aria-label="Toggle dark mode">🌙</button>
+    </div>
+  </div>
+
+  <div class="app">
+    <h1 id="title">Daftar Belanja</h1>
+
+    <div class="input-row">
+      <input id="userinput" type="text" placeholder="Nama barang..." />
+      <button id="enter">Tambahkan</button>
+    </div>
+
+    <div id="daftar" class="card">
+      <p id="checkText">Cek Daftar Barang:</p>
+      <ul id="myList">
+        <li>Sepatu</li>
+        <li>Sandal</li>
+        <li>Odol</li>
+        <li>Buku</li>
+        <li>Kaos</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Popup Checkout (baru) -->
+  <div id="checkoutPopup" class="popup hidden">
+    <div class="popup-content">
+      <h2>🛒 Checkout</h2>
+      <p>Pilih cara membagikan daftar belanja:</p>
+      <div class="popup-actions">
+        <button id="shareImageBtn">📷 Share as Image</button>
+        <button id="shareTextBtn">📝 Share as Text</button>
+      </div>
+      <button id="closePopup">❌ Tutup</button>
+    </div>
+  </div>
+
+  <!-- Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
